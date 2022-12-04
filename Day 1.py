@@ -1,7 +1,7 @@
 # Day 1
 import pandas as pd
 import numpy as np
-data = pd.read_csv('Data.csv', header=None,names=["Calories"],skip_blank_lines=False)
+data = pd.read_csv('aoc_day1.csv', header=None,names=["Calories"],skip_blank_lines=False)
 
 list_dfs = np.split(data, data[data.isnull()].index) 
 count_of_calories = sorted(list(map(lambda df: int(df.sum()[0]),df_list)))
